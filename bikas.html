@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>  <!-- Favicons -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('banner_bikash.png');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.middle1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+
+.date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30vmin;
+  font-weight: 300;
+  color: #fff;
+ padding-left: 20px;
+ padding-right: 30px;
+  box-shadow: -5px -5px 5px 0 rgba(255, 255, 255, 0.04),
+    7px 7px 7px 0 rgba(0, 0, 0, 2);
+}
+.date .sec {
+  font-size: 0.5em;
+}
+
+.date .min::before,
+.date .sec::before {
+  content: ":";
+
+}
+
+@supports (-webkit-background-clip: text) {
+  .date {
+    background: #fff;
+    filter: saturate(2) brightness(2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+      <a href="#" class="logo mr-auto"><img src="logo.png" alt="" height="100" width="100"></a>
+  </div>
+  <div class="middle1">
+    <h1>COMING SOON</h1>
+    <hr>
+    </div>
+    <div class="middle">
+    <div class="date"><span class="hour"></span><span class="min"></span><span class="sec"></span></div>
+    <script>
+      console.clear();
+
+      function clock() {
+        let d = new Date(),
+            h = d.getHours(),
+            m = d.getMinutes(),
+            s = d.getSeconds();
+
+        if (h < 10) h = `0${h}`;
+        if (m < 10) m = `0${m}`;
+        if (s < 10) s = `0${s}`;
+
+        document.querySelector('.hour').textContent = h;
+        document.querySelector('.min').textContent = m;
+        document.querySelector('.sec').textContent = s;
+
+        setTimeout(clock, 1000);
+      }
+
+      clock();
+    </script>
+
+
+</body>
+</html>
