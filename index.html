@@ -54,6 +54,67 @@
         .teams .carousel .card:hover img{
             border-color: #fff;
         }
+        
+        .footer-social-links{
+            font-size: 45px;
+            margin-top: 10%;
+        }
+        .footer-social-links a{
+            width: 50px;
+            height: 50px;
+            line-height: 25px !important;
+            position: relative;
+            margin: 0 10px;
+            text-align: center;
+            display: inline-block;
+            color: white;
+            
+            -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+            -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+            -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+            -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+            transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        }
+        .footer-social-links a i,
+        .footer-social-links a span{
+            position: relative;
+            top: 2px;
+            left: 1px; 
+        }
+        .footer-social-links a:before{
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #111;
+            background: crimson;
+            
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            
+            -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+            -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+            -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+            -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+            transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+            
+        }
+        .footer-social-links a:hover{
+            color: rgb(194, 36, 36);
+        }
+        .footer-social-links a:hover:before{
+            background: #FFF;
+        }
     </style>
 </head>
 <body>
@@ -418,7 +479,14 @@
                     </div>
                 </div>
                 <div class="column right">
-                    <div class="text">Message me</div>
+                    <div class="text">Message me on  <i class="fas fa-arrow-alt-circle-down"></i></i></div>    
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/hc.drizzle" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bikas_shah" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bikash-shah-16a4211a0" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/+9779860348177" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                      </div>
+<!--                     <div class="text">Message me</div>
                     <form action="index_store.php" method="POST">
                         <div class="fields">
                             <div class="field name">
@@ -438,7 +506,7 @@
                             <button type="submit">Send message</button>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
